@@ -1,0 +1,48 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.4.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
+}
+
+group = 'com.webapp'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+configurations {
+	developmentOnly
+	runtimeClasspath {
+		extendsFrom developmentOnly
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+	// https://mvnrepository.com/artifact/org.jasig.cas.client/cas-client-support-springboot
+	//compile group: 'org.jasig.cas.client', name: 'cas-client-support-springboot', version: '3.6.1'
+	implementation 'org.jasig.cas.client:cas-client:3.6.1'
+	//compile 'org.jasig.cas.client:cas-client-support-springboot:3.6.1'
+	
+	
+	// https://mvnrepository.com/artifact/org.jasig.cas.client/cas-client-core
+	compile group: 'org.jasig.cas.client', name: 'cas-client-core', version: '3.6.1'
+	// https://mvnrepository.com/artifact/org.jasig.cas.client/cas-client-support-saml
+	compile group: 'org.jasig.cas.client', name: 'cas-client-support-saml', version: '3.6.1'
+	
+	
+	
+	
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+}
+
+test {
+	useJUnitPlatform()
+}
