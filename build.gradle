@@ -25,16 +25,14 @@ dependencies {
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 
 	// https://mvnrepository.com/artifact/org.jasig.cas.client/cas-client-support-springboot
-	//compile group: 'org.jasig.cas.client', name: 'cas-client-support-springboot', version: '3.6.1'
-	implementation 'org.jasig.cas.client:cas-client:3.6.1'
-	//compile 'org.jasig.cas.client:cas-client-support-springboot:3.6.1'
+	compile group: 'org.jasig.cas.client', name: 'cas-client-support-springboot', version: '3.6.1'
 	
-	
+	/*
 	// https://mvnrepository.com/artifact/org.jasig.cas.client/cas-client-core
 	compile group: 'org.jasig.cas.client', name: 'cas-client-core', version: '3.6.1'
 	// https://mvnrepository.com/artifact/org.jasig.cas.client/cas-client-support-saml
 	compile group: 'org.jasig.cas.client', name: 'cas-client-support-saml', version: '3.6.1'
-	
+	*/
 	
 	
 	
